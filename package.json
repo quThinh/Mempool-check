@@ -1,0 +1,24 @@
+{
+  "name": "mempool-monitor",
+  "version": "1.0.0",
+  "description": "Monitor mempool for specific wallet transactions using TypeScript and ethers.js",
+  "main": "dist/mempool-monitor.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/mempool-monitor.js",
+    "dev": "ts-node src/mempool-monitor.ts",
+    "watch": "tsc --watch"
+  },
+  "keywords": ["mempool", "ethereum", "blockchain", "monitoring", "ethers"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ethers": "^6.8.0",
+    "axios": "^1.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  }
+}
