@@ -47,6 +47,12 @@ export interface MonitorConfig {
   apiUrl: string;
   walletAddress: string;
   checkInterval: number;
+
+  privateKey?: string;
+  targetTxHash?: string;
+  gasPriceMultiplier?: number;
+  recipientAddress?: string;
+  sendValue?: string; // Amount to send in ETH
 }
 
 export interface MonitorStats {
