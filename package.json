@@ -7,6 +7,7 @@
     "build": "tsc",
     "start": "node dist/mempool-monitor.js",
     "dev": "ts-node src/mempool-monitor.ts",
+    "collect": "ts-node src/mempool-collector.ts",
     "watch": "tsc --watch"
   },
   "keywords": ["mempool", "ethereum", "blockchain", "monitoring", "ethers"],

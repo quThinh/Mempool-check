@@ -26,20 +26,32 @@ npm run build
 
 ## Usage
 
-### Development Mode (with ts-node)
+### Mempool Monitor (MEV Bot)
 ```bash
+# Development mode
 npm run dev -- --wallet 0xYourWalletAddress
-```
 
-### Production Mode
-```bash
+# Production mode
 npm run build
 npm start -- --wallet 0xYourWalletAddress
+
+# With private key for sending transactions
+npm run dev -- --wallet 0xYourWalletAddress --private-key 0xabc123... --recipient 0xdef456...
 ```
 
-### Advanced Usage
+### Mempool Data Collector
 ```bash
-npm run dev -- --wallet 0xYourWalletAddress --api-url http://0.0.0.0:26545 --interval 0.5
+# Collect mempool data once
+npm run collect
+
+# Collect continuously every 5 seconds
+npm run collect -- --mode continuous --interval 5000
+
+# Use different API endpoint
+npm run collect -- --api-url http://localhost:8545
+
+# List all collected files
+npm run collect -- --list
 ```
 
 ### Parameters
@@ -96,8 +108,9 @@ This will compile TypeScript files automatically when changes are detected.
 ### Project Structure
 ```
 src/
-├── types.ts           # TypeScript type definitions
-└── mempool-monitor.ts # Main monitoring logic
+├── types.ts              # TypeScript type definitions
+├── mempool-monitor.ts    # MEV bot monitoring logic
+└── mempool-collector.ts  # Data collection script
 ```
 
 ## Notes
